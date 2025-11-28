@@ -3,10 +3,10 @@ from .pet_lister_controller import PetListerController
 
 class MockPetsRepository:
     def list_pets(self):
-        return {
+        return [
             PetsTable(name="Fuffly", type="cat", id=4),
             PetsTable(name="Buddy", type="Dog", id=47)
-        }
+        ]
 
 def test_list_pets():
     controller = PetListerController(MockPetsRepository())
